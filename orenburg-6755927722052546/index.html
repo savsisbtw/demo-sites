@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta name="robots" content="noindex, nofollow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Clifford, автоцентр и СТО с дополнительным оборудованием для автомобилей, Оренбург</title>
+<meta name="description" content="Легковой автосервис. Оренбург, Волгоградская улица, 7. Каждый день 09:00-20:00. Рейтинг 4,9 в 2ГИС.">
+<style>
+:root{
+  --bg:#0f1113;
+  --bg2:#171a1d;
+  --line:#2a2f34;
+  --text:#eceae4;
+  --muted:#a4a8ad;
+  --accent:#e9b44c;
+  --accent-ink:#1a1405;
+  --radius:10px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  background:var(--bg);color:var(--text);
+  font:16px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+  -webkit-text-size-adjust:100%;
+}
+a{color:inherit}
+img{display:block;max-width:100%}
+.wrap{width:100%;max-width:1080px;margin:0 auto;padding:0 16px}
+section{padding:48px 0;border-top:1px solid var(--line)}
+h1,h2,h3{line-height:1.15;font-weight:700;letter-spacing:-.01em}
+h2{font-size:1.6rem;margin-bottom:8px}
+.lead{color:var(--muted);margin-bottom:24px;max-width:60ch}
+
+header.top{position:sticky;top:0;z-index:5;background:rgba(15,17,19,.92);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
+header.top .wrap{display:flex;align-items:center;justify-content:space-between;height:56px;gap:12px}
+.logo{font-weight:700;text-decoration:none;font-size:1.05rem}
+.logo span{color:var(--accent)}
+nav.menu{display:none;gap:20px}
+nav.menu a{text-decoration:none;color:var(--muted);font-size:.95rem}
+nav.menu a:hover{color:var(--text)}
+
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;
+  min-height:48px;padding:0 22px;border-radius:var(--radius);
+  font:inherit;font-weight:600;text-decoration:none;
+  border:1px solid var(--line);color:var(--text);background:transparent;
+}
+.btn:hover{border-color:var(--muted)}
+.btn.main{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+.btn.main:hover{filter:brightness(1.08)}
+.btn.small{min-height:40px;padding:0 14px;font-size:.92rem}
+
+.hero{padding:44px 0 40px;border-top:0}
+.tag{color:var(--accent);font-size:.85rem;text-transform:uppercase;letter-spacing:.08em;margin-bottom:14px}
+.hero h1{font-size:2.1rem;margin-bottom:16px}
+.hero p.sub{color:var(--muted);font-size:1.05rem;max-width:52ch;margin-bottom:24px}
+.cta{display:flex;flex-direction:column;gap:10px;margin-bottom:28px}
+.facts{display:grid;gap:12px;grid-template-columns:1fr;border-top:1px solid var(--line);padding-top:20px}
+.facts div{font-size:.95rem;color:var(--muted)}
+.facts b{display:block;color:var(--text);font-size:1.15rem;font-weight:600}
+
+.price-block{margin-bottom:28px}
+.price-block h3{font-size:1.1rem;margin-bottom:6px;color:var(--accent)}
+.rows{list-style:none;border-top:1px solid var(--line)}
+.rows li{display:flex;justify-content:space-between;gap:16px;padding:12px 0;border-bottom:1px solid var(--line)}
+.rows .n{flex:1}
+.rows .p{white-space:nowrap;font-weight:600;font-variant-numeric:tabular-nums}
+.note{font-size:.9rem;color:var(--muted);margin-top:16px;max-width:70ch}
+
+.gallery{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.gallery img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:8px;background:var(--bg2)}
+
+.rating{display:flex;align-items:baseline;gap:10px;margin-bottom:20px}
+.rating strong{font-size:2.2rem;color:var(--accent)}
+.rating span{color:var(--muted)}
+.reviews{display:grid;gap:12px}
+blockquote{background:var(--bg2);border:1px solid var(--line);border-radius:var(--radius);padding:16px}
+blockquote .stars{color:var(--accent);letter-spacing:2px;margin-bottom:8px;font-size:.95rem}
+blockquote p{white-space:pre-line}
+
+.contacts{display:grid;gap:24px}
+.contacts dl{display:grid;gap:14px}
+.contacts dt{color:var(--muted);font-size:.85rem;margin-bottom:2px}
+.contacts dd{font-size:1.05rem}
+.contacts dd a{text-underline-offset:3px}
+.msgs{display:flex;flex-wrap:wrap;gap:8px}
+.hours{width:100%;border-collapse:collapse}
+.hours td{padding:8px 0;border-bottom:1px solid var(--line)}
+.hours td:last-child{text-align:right;font-variant-numeric:tabular-nums}
+
+footer{border-top:1px solid var(--line);padding:24px 0 32px;background:var(--bg2)}
+.demo{font-size:.9rem;color:var(--muted);text-align:center;max-width:70ch;margin:0 auto}
+
+@media (min-width:720px){
+  .wrap{padding:0 24px}
+  nav.menu{display:flex}
+  section{padding:72px 0}
+  h2{font-size:2rem}
+  .hero{padding:80px 0 64px}
+  .hero h1{font-size:3.2rem;max-width:18ch}
+  .cta{flex-direction:row}
+  .facts{grid-template-columns:repeat(3,1fr)}
+  .price-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+  .gallery{grid-template-columns:repeat(4,1fr);gap:12px}
+  .reviews{grid-template-columns:1fr 1fr}
+  .contacts{grid-template-columns:1fr 1fr;gap:48px}
+}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="#top">Clifford<span>.</span></a>
+    <nav class="menu">
+      <a href="#price">Услуги и цены</a>
+      <a href="#reviews">Отзывы</a>
+      <a href="#contacts">Контакты</a>
+    </nav>
+    <a class="btn small main" href="tel:+79585824521">Позвонить</a>
+  </div>
+</header>
+
+<main id="top">
+
+<section class="hero">
+  <div class="wrap">
+    <p class="tag">Легковой автосервис · Оренбург</p>
+    <h1>Clifford, автоцентр и СТО с дополнительным оборудованием для автомобилей</h1>
+    <p class="sub">В карточке 2ГИС: Легковой автосервис, спецавтооборудование, автосигнализации, газовое оборудование для авто, автозвук, автоаксессуары, автохимия, развал-схождение.</p>
+    <div class="cta">
+      <a class="btn main" href="tel:+79585824521">Позвонить</a>
+      <a class="btn" href="https://2gis.ru/orenburg/firm/6755927722052546" target="_blank" rel="noopener">Как добраться</a>
+    </div>
+    <div class="facts">
+      <div><b>4,9 в 2ГИС</b>209 отзывов</div>
+      <div><b>09:00-20:00</b>каждый день</div>
+      <div><b>Оренбург, Волгоградская улица, 7</b>Оренбург</div>
+    </div>
+  </div>
+</section>
+
+<section id="price">
+  <div class="wrap">
+    <h2>Услуги и цены</h2>
+    <p class="lead">Цены из карточки в 2ГИС. Точную стоимость для вашего случая уточняйте по телефону.</p>
+    <div class="price-grid">
+      <div>
+        <div class="price-block">
+          <h3>Сигнализации StarLine</h3>
+          <ul class="rows">
+            <li><span class="n">StarLine A63 2CAN+2LIN ECO</span><span class="p">15&nbsp;450&nbsp;₽</span></li>
+            <li><span class="n">StarLine A93 2CAN+2LIN</span><span class="p">20&nbsp;650&nbsp;₽</span></li>
+            <li><span class="n">StarLine A93 ECO</span><span class="p">11&nbsp;800&nbsp;₽</span></li>
+            <li><span class="n">StarLine E66 V2 BT ECO 2CAN+4LIN</span><span class="p">15&nbsp;450&nbsp;₽</span></li>
+            <li><span class="n">StarLine E96 V2 BT 2CAN+4LIN</span><span class="p">20&nbsp;650&nbsp;₽</span></li>
+            <li><span class="n">StarLine E96 v2 BT 2CAN+4LIN 2SIM GSM+GPS</span><span class="p">30&nbsp;400&nbsp;₽</span></li>
+            <li><span class="n">StarLine S66 V2 BT 2CAN+4LIN 2SIM GSM</span><span class="p">17&nbsp;100&nbsp;₽</span></li>
+            <li><span class="n">StarLine S96 v2 2CAN+4LIN 2SIM GSM</span><span class="p">20&nbsp;650&nbsp;₽</span></li>
+          </ul>
+        </div>
+        <div class="price-block">
+          <h3>Газобаллонное оборудование</h3>
+          <ul class="rows">
+            <li><span class="n">Демонтаж/монтаж баллона</span><span class="p">1&nbsp;500&nbsp;₽</span></li>
+            <li><span class="n">Демонтаж/монтаж мультиклапана</span><span class="p">800&nbsp;₽</span></li>
+            <li><span class="n">Диагностика ГБО</span><span class="p">1&nbsp;000&nbsp;₽</span></li>
+            <li><span class="n">Опрессовка газового баллона</span><span class="p">800&nbsp;₽</span></li>
+            <li><span class="n">Установка ГБО GFI 4-цилиндровые двигатели</span><span class="p">45&nbsp;000&nbsp;₽</span></li>
+            <li><span class="n">Установка ГБО Lovato 4-цилиндровые двигатели</span><span class="p">50&nbsp;000&nbsp;₽</span></li>
+            <li><span class="n">Установка ГБО OMVL 4-цилиндровые двигатели</span><span class="p">50&nbsp;000&nbsp;₽</span></li>
+          </ul>
+        </div>
+        <div class="price-block">
+          <h3>Подогреватели и дополнительное оборудование</h3>
+          <ul class="rows">
+            <li><span class="n">Диагностика подогревателя двигателя или автономного отопителя</span><span class="p">1&nbsp;800&nbsp;₽</span></li>
+            <li><span class="n">Скрытая установка* видеорегистратора</span><span class="p">1&nbsp;440&nbsp;₽</span></li>
+            <li><span class="n">Скрытая установка* радар-детектора / комбо устройства</span><span class="p">1&nbsp;440&nbsp;₽</span></li>
+            <li><span class="n">Установка автономного подогревателя двигателя</span><span class="p">19&nbsp;800&nbsp;₽</span></li>
+            <li><span class="n">Установка воздушного отопителя салона</span><span class="p">12&nbsp;600&nbsp;₽</span></li>
+            <li><span class="n">Установка парковочного ассистента</span><span class="p">5&nbsp;400&nbsp;₽</span></li>
+          </ul>
+        </div>
+        <div class="price-block">
+          <h3>Обслуживание и ремонт</h3>
+          <ul class="rows">
+            <li><span class="n">Балансировочный груз набивной .</span><span class="p">50&nbsp;₽</span></li>
+            <li><span class="n">Балансировочный груз самоклеющийся (грузовой автомобиль) .</span><span class="p">110&nbsp;₽</span></li>
+            <li><span class="n">Балансировочный груз самоклеющийся .</span><span class="p">50&nbsp;₽</span></li>
+            <li><span class="n">Демонтаж/монтаж защиты картера</span><span class="p">660&nbsp;₽</span></li>
+            <li><span class="n">Диагностика</span><span class="p">1&nbsp;800&nbsp;₽</span></li>
+            <li><span class="n">Диагностика и заправка</span><span class="p">1&nbsp;440&nbsp;₽</span></li>
+            <li><span class="n">Диагностика ходовой части</span><span class="p">1&nbsp;100&nbsp;₽</span></li>
+            <li><span class="n">Замена ШРУСа</span><span class="p">2&nbsp;200&nbsp;₽</span></li>
+            <li><span class="n">Замена воздушного фильтра</span><span class="p">440&nbsp;₽</span></li>
+            <li><span class="n">Замена компрессора</span><span class="p">3&nbsp;600&nbsp;₽</span></li>
+            <li><span class="n">Замена масла в АКПП</span><span class="p">4&nbsp;400&nbsp;₽</span></li>
+            <li><span class="n">Замена масла в МКПП</span><span class="p">1&nbsp;100&nbsp;₽</span></li>
+            <li><span class="n">Замена масла в двигателе</span><span class="p">1&nbsp;100&nbsp;₽</span></li>
+            <li><span class="n">Замена охлаждающей жидкости</span><span class="p">1&nbsp;760&nbsp;₽</span></li>
+            <li><span class="n">Замена подшипника ступицы</span><span class="p">1&nbsp;760&nbsp;₽</span></li>
+            <li><span class="n">Замена ремня ГРМ</span><span class="p">2&nbsp;200&nbsp;₽</span></li>
+            <li><span class="n">Замена салонного фильтра</span><span class="p">660&nbsp;₽</span></li>
+            <li><span class="n">Замена стойки стабилизатора</span><span class="p">1&nbsp;100&nbsp;₽</span></li>
+            <li><span class="n">Замена ступицы в сборе</span><span class="p">2&nbsp;200&nbsp;₽</span></li>
+            <li><span class="n">Замена топливного фильтра</span><span class="p">1&nbsp;100&nbsp;₽</span></li>
+            <li><span class="n">Замена тормозной жидкости</span><span class="p">1&nbsp;760&nbsp;₽</span></li>
+            <li><span class="n">Замена тормозных колодок</span><span class="p">1&nbsp;760&nbsp;₽</span></li>
+            <li><span class="n">Замена фильтра осушителя</span><span class="p">900&nbsp;₽</span></li>
+            <li><span class="n">Замена шаровой опоры</span><span class="p">880&nbsp;₽</span></li>
+            <li><span class="n">Регулировка кастера</span><span class="p">2&nbsp;200&nbsp;₽</span></li>
+            <li><span class="n">Регулировка углов установки колёс (развал-схождения) /ось</span><span class="p">1&nbsp;760&nbsp;₽</span></li>
+            <li><span class="n">Сброс межсервисного интервала</span><span class="p">440&nbsp;₽</span></li>
+            <li><span class="n">Сброс ошибок</span><span class="p">900&nbsp;₽</span></li>
+            <li><span class="n">Смазка направляющих суппортов</span><span class="p">1&nbsp;760&nbsp;₽</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <p class="note">Показана часть прайса из карточки в 2ГИС, уточняйте по телефону.</p>
+  </div>
+</section>
+
+<section id="reviews">
+  <div class="wrap">
+    <h2>Отзывы</h2>
+    <div class="rating"><strong>4,9</strong><span>средняя оценка, 209 отзывов в 2ГИС</span></div>
+    <div class="reviews">
+      <blockquote>
+        <div class="stars" aria-label="Оценка 5 из 5">★★★★★</div>
+        <p>Наикомпетентнейший сервис из всех, которые я знаю или когда то знал. Спасибо Вам большое за безопасность моего движения. Александр</p>
+      </blockquote>
+      <blockquote>
+        <div class="stars" aria-label="Оценка 5 из 5">★★★★★</div>
+        <p>Самый лучший автосервис,обслуживаюсь больше 10 лет,всегда выполняют свою работу качественно и не дорого.</p>
+      </blockquote>
+      <blockquote>
+        <div class="stars" aria-label="Оценка 5 из 5">★★★★★</div>
+        <p>Классные ребята, шикарное обслуживание. По моему личному мнению - лучший сервис в городе! Твёрдая пятёрка.</p>
+      </blockquote>
+      <blockquote>
+        <div class="stars" aria-label="Оценка 5 из 5">★★★★★</div>
+        <p>Установили сигнализацию быстро и качественно. Не первый раз обращаюсь к ним. Все подсказали и рассказали, настроили. Рекомендую</p>
+      </blockquote>
+      <blockquote>
+        <div class="stars" aria-label="Оценка 5 из 5">★★★★★</div>
+        <p>Отлично! Быстро выполнили развал-схождение после шиномонтажа, мастер вежливый и приятный в общении. 🤝 зона ожидания комфортная 👍 остались самые приятные впечатления!</p>
+      </blockquote>
+    </div>
+  </div>
+</section>
+
+<section id="contacts">
+  <div class="wrap">
+    <h2>Контакты и часы</h2>
+    <div class="contacts">
+      <div>
+        <dl>
+          <div><dt>Адрес</dt><dd>Оренбург, Волгоградская улица, 7</dd></div>
+          <div><dt>Телефон</dt><dd><a href="tel:+79585824521">+7-958-582-45-21</a></dd></div>
+          <div><dt>Почта</dt><dd><a href="mailto:auto-clifford@mail.ru">auto-clifford@mail.ru</a></dd></div>
+          <div><dt>Мессенджеры и соцсети</dt>
+            <dd class="msgs">
+              <a class="btn small" href="https://vk.ru/clifford56" target="_blank" rel="noopener">ВКонтакте</a>
+              <a class="btn small" href="https://t.me/clifford56_bot" target="_blank" rel="noopener">Telegram</a>
+            </dd>
+          </div>
+        </dl>
+        <div class="cta" style="margin-top:24px;margin-bottom:0">
+          <a class="btn main" href="tel:+79585824521">Позвонить</a>
+          <a class="btn" href="https://2gis.ru/orenburg/firm/6755927722052546" target="_blank" rel="noopener">Как добраться</a>
+        </div>
+      </div>
+      <div>
+        <h3 style="margin-bottom:8px">Часы работы</h3>
+        <table class="hours">
+          <tr><td>Понедельник</td><td>09:00-20:00</td></tr>
+          <tr><td>Вторник</td><td>09:00-20:00</td></tr>
+          <tr><td>Среда</td><td>09:00-20:00</td></tr>
+          <tr><td>Четверг</td><td>09:00-20:00</td></tr>
+          <tr><td>Пятница</td><td>09:00-20:00</td></tr>
+          <tr><td>Суббота</td><td>09:00-20:00</td></tr>
+          <tr><td>Воскресенье</td><td>09:00-20:00</td></tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <p class="demo">Демо-концепт сайта для «Clifford, автоцентр и СТО с дополнительным оборудованием для автомобилей». Не является официальным сайтом. Удалю при первой просьбе. Фото из открытых источников в 2ГИС.</p>
+  </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta name="robots" content="noindex, nofollow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>102 Авто, автотехцентр, Нефтекамск</title>
+<meta name="description" content="Легковой автосервис. Нефтекамск, Трактовая улица, 6 ПЗ. Пн-пт 08:00-20:00. Рейтинг 4,9 в 2ГИС.">
+<style>
+:root{
+  --bg:#0f1113;
+  --bg2:#171a1d;
+  --line:#2a2f34;
+  --text:#eceae4;
+  --muted:#a4a8ad;
+  --accent:#e9b44c;
+  --accent-ink:#1a1405;
+  --radius:10px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  background:var(--bg);color:var(--text);
+  font:16px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+  -webkit-text-size-adjust:100%;
+}
+a{color:inherit}
+img{display:block;max-width:100%}
+.wrap{width:100%;max-width:1080px;margin:0 auto;padding:0 16px}
+section{padding:48px 0;border-top:1px solid var(--line)}
+h1,h2,h3{line-height:1.15;font-weight:700;letter-spacing:-.01em}
+h2{font-size:1.6rem;margin-bottom:8px}
+.lead{color:var(--muted);margin-bottom:24px;max-width:60ch}
+
+header.top{position:sticky;top:0;z-index:5;background:rgba(15,17,19,.92);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
+header.top .wrap{display:flex;align-items:center;justify-content:space-between;height:56px;gap:12px}
+.logo{font-weight:700;text-decoration:none;font-size:1.05rem}
+.logo span{color:var(--accent)}
+nav.menu{display:none;gap:20px}
+nav.menu a{text-decoration:none;color:var(--muted);font-size:.95rem}
+nav.menu a:hover{color:var(--text)}
+
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;
+  min-height:48px;padding:0 22px;border-radius:var(--radius);
+  font:inherit;font-weight:600;text-decoration:none;
+  border:1px solid var(--line);color:var(--text);background:transparent;
+}
+.btn:hover{border-color:var(--muted)}
+.btn.main{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+.btn.main:hover{filter:brightness(1.08)}
+.btn.small{min-height:40px;padding:0 14px;font-size:.92rem}
+
+.hero{padding:44px 0 40px;border-top:0}
+.tag{color:var(--accent);font-size:.85rem;text-transform:uppercase;letter-spacing:.08em;margin-bottom:14px}
+.hero h1{font-size:2.1rem;margin-bottom:16px}
+.hero p.sub{color:var(--muted);font-size:1.05rem;max-width:52ch;margin-bottom:24px}
+.cta{display:flex;flex-direction:column;gap:10px;margin-bottom:28px}
+.facts{display:grid;gap:12px;grid-template-columns:1fr;border-top:1px solid var(--line);padding-top:20px}
+.facts div{font-size:.95rem;color:var(--muted)}
+.facts b{display:block;color:var(--text);font-size:1.15rem;font-weight:600}
+
+.price-block{margin-bottom:28px}
+.price-block h3{font-size:1.1rem;margin-bottom:6px;color:var(--accent)}
+.rows{list-style:none;border-top:1px solid var(--line)}
+.rows li{display:flex;justify-content:space-between;gap:16px;padding:12px 0;border-bottom:1px solid var(--line)}
+.rows .n{flex:1}
+.rows .p{white-space:nowrap;font-weight:600;font-variant-numeric:tabular-nums}
+.note{font-size:.9rem;color:var(--muted);margin-top:16px;max-width:70ch}
+
+.gallery{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.gallery img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:8px;background:var(--bg2)}
+
+.rating{display:flex;align-items:baseline;gap:10px;margin-bottom:20px}
+.rating strong{font-size:2.2rem;color:var(--accent)}
+.rating span{color:var(--muted)}
+.reviews{display:grid;gap:12px}
+blockquote{background:var(--bg2);border:1px solid var(--line);border-radius:var(--radius);padding:16px}
+blockquote .stars{color:var(--accent);letter-spacing:2px;margin-bottom:8px;font-size:.95rem}
+blockquote p{white-space:pre-line}
+
+.contacts{display:grid;gap:24px}
+.contacts dl{display:grid;gap:14px}
+.contacts dt{color:var(--muted);font-size:.85rem;margin-bottom:2px}
+.contacts dd{font-size:1.05rem}
+.contacts dd a{text-underline-offset:3px}
+.msgs{display:flex;flex-wrap:wrap;gap:8px}
+.hours{width:100%;border-collapse:collapse}
+.hours td{padding:8px 0;border-bottom:1px solid var(--line)}
+.hours td:last-child{text-align:right;font-variant-numeric:tabular-nums}
+
+footer{border-top:1px solid var(--line);padding:24px 0 32px;background:var(--bg2)}
+.demo{font-size:.9rem;color:var(--muted);text-align:center;max-width:70ch;margin:0 auto}
+
+@media (min-width:720px){
+  .wrap{padding:0 24px}
+  nav.menu{display:flex}
+  section{padding:72px 0}
+  h2{font-size:2rem}
+  .hero{padding:80px 0 64px}
+  .hero h1{font-size:3.2rem;max-width:18ch}
+  .cta{flex-direction:row}
+  .facts{grid-template-columns:repeat(3,1fr)}
+  .price-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+  .gallery{grid-template-columns:repeat(4,1fr);gap:12px}
+  .reviews{grid-template-columns:1fr 1fr}
+  .contacts{grid-template-columns:1fr 1fr;gap:48px}
+}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="#top">102 Авто<span>.</span></a>
+    <nav class="menu">
+      <a href="#price">Услуги и цены</a>
+      <a href="#photo">Фото</a>
+      <a href="#reviews">Отзывы</a>
+      <a href="#contacts">Контакты</a>
+    </nav>
+    <a class="btn small main" href="tel:+73478326220">Позвонить</a>
+  </div>
+</header>
+
+<main id="top">
+
+<section class="hero">
+  <div class="wrap">
+    <p class="tag">Легковой автосервис · Нефтекамск</p>
+    <h1>102 Авто, автотехцентр</h1>
+    <p class="sub">В карточке 2ГИС: Легковой автосервис, автомойки, кузовной ремонт, продажа легковых автомобилей, замена масла, развал-схождение, обслуживание автомобильных климатических систем, ремонт МКПП.</p>
+    <div class="cta">
+      <a class="btn main" href="tel:+73478326220">Позвонить</a>
+      <a class="btn" href="https://2gis.ru/neftekamsk/firm/70000001023880985" target="_blank" rel="noopener">Как добраться</a>
+    </div>
+    <div class="facts">
+      <div><b>4,9 в 2ГИС</b>120 отзывов</div>
+      <div><b>08:00-20:00</b>пн-пт</div>
+      <div><b>Нефтекамск, Трактовая улица, 6 ПЗ</b>Нефтекамск</div>
+    </div>
+  </div>
+</section>
+
+<section id="price">
+  <div class="wrap">
+    <h2>Услуги и цены</h2>
+    <p class="lead">Цены из карточки в 2ГИС. Точную стоимость для вашего случая уточняйте по телефону.</p>
+    <div class="price-grid">
+      <div>
+        <div class="price-block">
+          <h3>Мойка и шины</h3>
+          <ul class="rows">
+            <li><span class="n">Бесконтактная автомойка</span><span class="p">600&nbsp;₽</span></li>
+            <li><span class="n">Шиномонтаж</span><span class="p">1&nbsp;800&nbsp;₽</span></li>
+          </ul>
+        </div>
+        <div class="price-block">
+          <h3>Ремонт и сервис</h3>
+          <ul class="rows">
+            <li><span class="n">Кузовной ремонт</span><span class="p">5&nbsp;000&nbsp;₽</span></li>
+            <li><span class="n">Автосервис</span><span class="p">400&nbsp;₽</span></li>
+          </ul>
+        </div>
+      </div>
+      <div>
+        <div class="price-block">
+          <h3>Прокат</h3>
+          <ul class="rows">
+            <li><span class="n">Прокат авто</span><span class="p">2&nbsp;300&nbsp;₽</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="photo">
+  <div class="wrap">
+    <h2>Фото</h2>
+    <p class="lead">Снимки из галереи карточки в 2ГИС.</p>
+    <div class="gallery">
+      <img src="img/1.jpg" alt="Фото из 2ГИС" loading="lazy" referrerpolicy="no-referrer">
+      <img src="img/2.jpg" alt="Фото из 2ГИС" loading="lazy" referrerpolicy="no-referrer">
+      <img src="img/3.jpg" alt="Фото из 2ГИС" loading="lazy" referrerpolicy="no-referrer">
+      <img src="img/4.jpg" alt="Фото из 2ГИС" loading="lazy" referrerpolicy="no-referrer">
+      <img src="img/5.jpg" alt="Фото из 2ГИС" loading="lazy" referrerpolicy="no-referrer">
+      <img src="img/6.jpg" alt="Фото из 2ГИС" loading="lazy" referrerpolicy="no-referrer">
+    </div>
+  </div>
+</section>
+
+<section id="reviews">
+  <div class="wrap">
+    <h2>Отзывы</h2>
+    <div class="rating"><strong>4,9</strong><span>средняя оценка, 120 отзывов в 2ГИС</span></div>
+    <div class="reviews">
+      <blockquote>
+        <div class="stars" aria-label="Оценка 5 из 5">★★★★★</div>
+        <p>Все очень понравилось, сдали старую машину, приобрели новую. Все быстро и качественно. Менеджер Динар весь процесс был рядом, подсказывал. Оценщик Фаниль, оценил машину отлично.</p>
+      </blockquote>
+      <blockquote>
+        <div class="stars" aria-label="Оценка 5 из 5">★★★★★</div>
+        <p>Самый лучший автосалон
+Добрый и отзывчивый коллектив
+Всем советую в любой беде помогут
+Особая благодарность 
+Продавцу Динару🤝</p>
+      </blockquote>
+      <blockquote>
+        <div class="stars" aria-label="Оценка 5 из 5">★★★★★</div>
+        <p>Безумно приятный салон! Очень приятный персонал и отдельная благодарность менеджеру Динару! Встретил, полностью сопроводил сделку, в общем и целом рекомендую данный автосалон!</p>
+      </blockquote>
+      <blockquote>
+        <div class="stars" aria-label="Оценка 5 из 5">★★★★★</div>
+        <p>Всё просто супер понравилось. Особенно Денис и Гузалия. Обслуживание класс👍👍👍</p>
+      </blockquote>
+      <blockquote>
+        <div class="stars" aria-label="Оценка 5 из 5">★★★★★</div>
+        <p>Приобрели автомобиль в 102 авто. Очень довольны, нас сопроводил консультант Павел, показал все авто и помог в выборе машины !!!! Персонал вежливый. Спасибо большое</p>
+      </blockquote>
+    </div>
+  </div>
+</section>
+
+<section id="contacts">
+  <div class="wrap">
+    <h2>Контакты и часы</h2>
+    <div class="contacts">
+      <div>
+        <dl>
+          <div><dt>Адрес</dt><dd>Нефтекамск, Трактовая улица, 6 ПЗ</dd></div>
+          <div><dt>Телефоны</dt><dd><a href="tel:+73478326220">+7 (34783) 2-62-20</a><br><a href="tel:+73478321112">+7 (34783) 2-11-12</a><br><a href="tel:+79625338343">+7-962-533-83-43</a></dd></div>
+          <div><dt>Мессенджеры и соцсети</dt>
+            <dd class="msgs">
+              <a class="btn small" href="https://vk.ru/avtocentr102avto" target="_blank" rel="noopener">ВКонтакте</a>
+              <a class="btn small" href="https://wa.me/79603810060" target="_blank" rel="noopener">WhatsApp</a>
+            </dd>
+          </div>
+        </dl>
+        <div class="cta" style="margin-top:24px;margin-bottom:0">
+          <a class="btn main" href="tel:+73478326220">Позвонить</a>
+          <a class="btn" href="https://2gis.ru/neftekamsk/firm/70000001023880985" target="_blank" rel="noopener">Как добраться</a>
+        </div>
+      </div>
+      <div>
+        <h3 style="margin-bottom:8px">Часы работы</h3>
+        <table class="hours">
+          <tr><td>Понедельник</td><td>08:00-20:00</td></tr>
+          <tr><td>Вторник</td><td>08:00-20:00</td></tr>
+          <tr><td>Среда</td><td>08:00-20:00</td></tr>
+          <tr><td>Четверг</td><td>08:00-20:00</td></tr>
+          <tr><td>Пятница</td><td>08:00-20:00</td></tr>
+          <tr><td>Суббота</td><td>08:00-19:00</td></tr>
+          <tr><td>Воскресенье</td><td>09:00-18:00</td></tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <p class="demo">Демо-концепт сайта для «102 Авто, автотехцентр». Не является официальным сайтом. Удалю при первой просьбе. Фото из открытых источников в 2ГИС.</p>
+  </div>
+</footer>
+</body>
+</html>

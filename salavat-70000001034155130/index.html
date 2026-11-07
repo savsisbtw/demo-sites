@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta name="robots" content="noindex, nofollow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Бункер, автосервис, Салават</title>
+<meta name="description" content="Автосервис «Бункер» в Салавате, Красноармейская улица, 8: ремонт двигателей, МКПП, ходовой части и выхлопных систем, шиномонтаж. Пн-Пт 10:00-20:00.">
+<style>
+:root{
+  --bg:#0f1113;
+  --bg2:#171a1d;
+  --line:#2a2f34;
+  --text:#eceae4;
+  --muted:#a4a8ad;
+  --accent:#e9b44c;
+  --accent-ink:#1a1405;
+  --radius:10px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  background:var(--bg);color:var(--text);
+  font:16px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+  -webkit-text-size-adjust:100%;
+}
+a{color:inherit}
+img{display:block;max-width:100%}
+.wrap{width:100%;max-width:1080px;margin:0 auto;padding:0 16px}
+section{padding:48px 0;border-top:1px solid var(--line)}
+h1,h2,h3{line-height:1.15;font-weight:700;letter-spacing:-.01em}
+h2{font-size:1.6rem;margin-bottom:8px}
+.lead{color:var(--muted);margin-bottom:24px;max-width:60ch}
+
+header.top{position:sticky;top:0;z-index:5;background:rgba(15,17,19,.92);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
+header.top .wrap{display:flex;align-items:center;justify-content:space-between;height:56px;gap:12px}
+.logo{font-weight:700;text-decoration:none;font-size:1.05rem}
+.logo span{color:var(--accent)}
+nav.menu{display:none;gap:20px}
+nav.menu a{text-decoration:none;color:var(--muted);font-size:.95rem}
+nav.menu a:hover{color:var(--text)}
+
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;
+  min-height:48px;padding:0 22px;border-radius:var(--radius);
+  font:inherit;font-weight:600;text-decoration:none;
+  border:1px solid var(--line);color:var(--text);background:transparent;
+}
+.btn:hover{border-color:var(--muted)}
+.btn.main{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+.btn.main:hover{filter:brightness(1.08)}
+.btn.small{min-height:40px;padding:0 14px;font-size:.92rem}
+
+.hero{padding:44px 0 40px;border-top:0}
+.tag{color:var(--accent);font-size:.85rem;text-transform:uppercase;letter-spacing:.08em;margin-bottom:14px}
+.hero h1{font-size:2.1rem;margin-bottom:16px}
+.hero p.sub{color:var(--muted);font-size:1.05rem;max-width:52ch;margin-bottom:24px}
+.cta{display:flex;flex-direction:column;gap:10px;margin-bottom:28px}
+.facts{display:grid;gap:12px;grid-template-columns:1fr;border-top:1px solid var(--line);padding-top:20px}
+.facts div{font-size:.95rem;color:var(--muted)}
+.facts b{display:block;color:var(--text);font-size:1.15rem;font-weight:600}
+
+.price-block{margin-bottom:28px}
+.price-block h3{font-size:1.1rem;margin-bottom:6px;color:var(--accent)}
+.rows{list-style:none;border-top:1px solid var(--line)}
+.rows li{display:flex;justify-content:space-between;gap:16px;padding:12px 0;border-bottom:1px solid var(--line)}
+.rows .n{flex:1}
+.rows .p{white-space:nowrap;font-weight:600;font-variant-numeric:tabular-nums}
+.note{font-size:.9rem;color:var(--muted);margin-top:16px;max-width:70ch}
+
+.gallery{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.gallery img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:8px;background:var(--bg2)}
+
+.rating{display:flex;align-items:baseline;gap:10px;margin-bottom:20px}
+.rating strong{font-size:2.2rem;color:var(--accent)}
+.rating span{color:var(--muted)}
+.reviews{display:grid;gap:12px}
+blockquote{background:var(--bg2);border:1px solid var(--line);border-radius:var(--radius);padding:16px}
+blockquote .stars{color:var(--accent);letter-spacing:2px;margin-bottom:8px;font-size:.95rem}
+blockquote p{white-space:pre-line}
+
+.contacts{display:grid;gap:24px}
+.contacts dl{display:grid;gap:14px}
+.contacts dt{color:var(--muted);font-size:.85rem;margin-bottom:2px}
+.contacts dd{font-size:1.05rem}
+.contacts dd a{text-underline-offset:3px}
+.msgs{display:flex;flex-wrap:wrap;gap:8px}
+.hours{width:100%;border-collapse:collapse}
+.hours td{padding:8px 0;border-bottom:1px solid var(--line)}
+.hours td:last-child{text-align:right;font-variant-numeric:tabular-nums}
+
+footer{border-top:1px solid var(--line);padding:24px 0 32px;background:var(--bg2)}
+.demo{font-size:.9rem;color:var(--muted);text-align:center;max-width:70ch;margin:0 auto}
+
+@media (min-width:720px){
+  .wrap{padding:0 24px}
+  nav.menu{display:flex}
+  section{padding:72px 0}
+  h2{font-size:2rem}
+  .hero{padding:80px 0 64px}
+  .hero h1{font-size:3.2rem;max-width:18ch}
+  .cta{flex-direction:row}
+  .facts{grid-template-columns:repeat(3,1fr)}
+  .price-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+  .gallery{grid-template-columns:repeat(4,1fr);gap:12px}
+  .reviews{grid-template-columns:1fr 1fr}
+  .contacts{grid-template-columns:1fr 1fr;gap:48px}
+}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="#top">Бункер<span>.</span></a>
+    <nav class="menu">
+      <a href="#price">Услуги и цены</a>
+      <a href="#reviews">Отзывы</a>
+      <a href="#contacts">Контакты</a>
+    </nav>
+    <a class="btn small main" href="tel:+79174533262">Позвонить</a>
+  </div>
+</header>
+
+<main id="top">
+
+<section class="hero">
+  <div class="wrap">
+    <p class="tag">Автосервис · Салават</p>
+    <h1>Бункер, автосервис</h1>
+    <p class="sub">Ремонт выхлопных систем, двигателей, МКПП и ходовой части, шиномонтаж.</p>
+    <div class="cta">
+      <a class="btn main" href="tel:+79174533262">Позвонить</a>
+      <a class="btn" href="https://2gis.ru/salavat/firm/70000001034155130" target="_blank" rel="noopener">Как добраться</a>
+    </div>
+    <div class="facts">
+      <div><b>5,0 в 2ГИС</b>41 отзыв</div>
+      <div><b>10:00-20:00</b>Пн-Пт, Сб и Вс выходной</div>
+      <div><b>Красноармейская улица, 8</b>Салават</div>
+    </div>
+  </div>
+</section>
+
+<section id="price">
+  <div class="wrap">
+    <h2>Услуги и цены</h2>
+    <p class="lead">Цены из карточки в 2ГИС. Итоговая стоимость зависит от автомобиля и объёма работ, поэтому указано «от». Где в карточке стоит заведомо условная цена, написано «цена по запросу».</p>
+    <div class="price-grid">
+      <div>
+        <div class="price-block">
+          <h3>Двигатель и трансмиссия</h3>
+          <ul class="rows">
+            <li><span class="n">Ремонт двигателей</span><span class="p">от 1 500 ₽</span></li>
+            <li><span class="n">Ремонт ДВС</span><span class="p">от 2 000 ₽</span></li>
+            <li><span class="n">Замена ремня ГРМ</span><span class="p">от 2 500 ₽</span></li>
+            <li><span class="n">Ремонт МКПП</span><span class="p">от 2 000 ₽</span></li>
+          </ul>
+        </div>
+        <div class="price-block">
+          <h3>Диагностика и электроника</h3>
+          <ul class="rows">
+            <li><span class="n">Диагностика систем автомобиля</span><span class="p">от 500 ₽</span></li>
+            <li><span class="n">Прошивка автомобилей</span><span class="p">от 2 000 ₽</span></li>
+            <li><span class="n">Установка автоакустики, ксенона, сигнализации, тонирование</span><span class="p">от 2 000 ₽</span></li>
+          </ul>
+        </div>
+      </div>
+      <div>
+        <div class="price-block">
+          <h3>Ходовая, выхлоп, шины</h3>
+          <ul class="rows">
+            <li><span class="n">Ремонт ходовой части автомобилей</span><span class="p">от 1 500 ₽</span></li>
+            <li><span class="n">Ремонт выхлопных систем</span><span class="p">от 2 000 ₽</span></li>
+            <li><span class="n">Удаление катализатора</span><span class="p">от 2 000 ₽</span></li>
+            <li><span class="n">Шиномонтаж</span><span class="p">от 500 ₽</span></li>
+          </ul>
+        </div>
+        <div class="price-block">
+          <h3>Другое</h3>
+          <ul class="rows">
+            <li><span class="n">Авто выкупа</span><span class="p">цена по запросу</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <p class="note">Показана часть прайса из карточки в 2ГИС, уточняйте по телефону.</p>
+  </div>
+</section>
+
+<section id="reviews">
+  <div class="wrap">
+    <h2>Отзывы</h2>
+    <div class="rating"><strong>5,0</strong><span>средняя оценка, 41 отзыв в 2ГИС</span></div>
+    <div class="reviews">
+      <blockquote>
+        <div class="stars" aria-label="Оценка 5 из 5">★★★★★</div>
+        <p>Парни молодцы, работу делают хорошо.
+Тактичные, объяснят все по делу. По телефону легко с ориентировали и записали. Работу выполнили на отлично.</p>
+      </blockquote>
+      <blockquote>
+        <div class="stars" aria-label="Оценка 5 из 5">★★★★★</div>
+        <p>Отличные мастера, комфортно, быстро определили проблему, хороший подъезд к мастерской.</p>
+      </blockquote>
+      <blockquote>
+        <div class="stars" aria-label="Оценка 5 из 5">★★★★★</div>
+        <p>Работу выполняют отлично, обслуживание прекрасное. Советую!!👍🏻👍🏻👍🏻</p>
+      </blockquote>
+      <blockquote>
+        <div class="stars" aria-label="Оценка 5 из 5">★★★★★</div>
+        <p>Ильдус мастер своего дела👍 Рекомендую данный сервис</p>
+      </blockquote>
+      <blockquote>
+        <div class="stars" aria-label="Оценка 5 из 5">★★★★★</div>
+        <p>Рекомендую! 
+Мастера своего дела с адекватными ценами.</p>
+      </blockquote>
+    </div>
+  </div>
+</section>
+
+<section id="contacts">
+  <div class="wrap">
+    <h2>Контакты и часы</h2>
+    <div class="contacts">
+      <div>
+        <dl>
+          <div><dt>Адрес</dt><dd>Салават, Красноармейская улица, 8</dd></div>
+          <div><dt>Телефон</dt><dd><a href="tel:+79174533262">+7 917 453-32-62</a> · <a href="tel:+79625192661">+7 962 519-26-61</a></dd></div>
+          <div><dt>Почта</dt><dd><a href="mailto:ilgizka1289@mail.ru">ilgizka1289@mail.ru</a></dd></div>
+          <div><dt>Мессенджеры и соцсети</dt>
+            <dd class="msgs">
+              <a class="btn small" href="https://vk.ru/bunker_slv" target="_blank" rel="noopener">ВКонтакте</a>
+              <a class="btn small" href="https://wa.me/79625192661" target="_blank" rel="noopener">WhatsApp 1</a>
+              <a class="btn small" href="https://wa.me/79174525268" target="_blank" rel="noopener">WhatsApp 2</a>
+              <a class="btn small" href="https://t.me/+79174533262" target="_blank" rel="noopener">Telegram 1</a>
+              <a class="btn small" href="https://t.me/+79625192661" target="_blank" rel="noopener">Telegram 2</a>
+            </dd>
+          </div>
+        </dl>
+        <div class="cta" style="margin-top:24px;margin-bottom:0">
+          <a class="btn main" href="tel:+79174533262">Позвонить</a>
+          <a class="btn" href="https://2gis.ru/salavat/firm/70000001034155130" target="_blank" rel="noopener">Как добраться</a>
+        </div>
+      </div>
+      <div>
+        <h3 style="margin-bottom:8px">Часы работы</h3>
+        <table class="hours">
+          <tr><td>Понедельник</td><td>10:00-20:00</td></tr>
+          <tr><td>Вторник</td><td>10:00-20:00</td></tr>
+          <tr><td>Среда</td><td>10:00-20:00</td></tr>
+          <tr><td>Четверг</td><td>10:00-20:00</td></tr>
+          <tr><td>Пятница</td><td>10:00-20:00</td></tr>
+          <tr><td>Суббота</td><td>выходной</td></tr>
+          <tr><td>Воскресенье</td><td>выходной</td></tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <p class="demo">Демо-концепт сайта для «Бункер, автосервис». Не является официальным сайтом. Удалю при первой просьбе. Фото из открытых источников в 2ГИС.</p>
+  </div>
+</footer>
+</body>
+</html>

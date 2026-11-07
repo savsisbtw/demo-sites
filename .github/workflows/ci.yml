@@ -1,0 +1,15 @@
+name: check
+on: [push]
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: every site has index.html and images exist
+        run: |
+          for d in */; do
+            test -f "$d/index.html" || { echo "no index in $d"; exit 1; }
+            for src in $(grep -o 'src="img/[^"]*"' "$d/index.html" | sed 's/src="//;s/"//'); do
+              test -f "$d/$src" || { echo "missing $d$src"; exit 1; }
+            done
+          done
